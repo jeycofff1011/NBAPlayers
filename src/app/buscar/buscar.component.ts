@@ -14,23 +14,22 @@ import { JugadoresService } from '../jugadores.service';
 export class BuscarComponent implements OnInit {
 
   nbaPlayers: Array<any> = [];
-  busqueda!: string;
+  search!: string;
   nbaPlayersFilter: Array<any> = [];
 
   constructor(public json: JsonService) {
     json.getJson('https://mach-eight.uc.r.appspot.com/')
-      .subscribe((respuesta: any) => {
-        this.nbaPlayers = respuesta.values;
-        this.nbaPlayersFilter = respuesta.values;
+      .subscribe((answer: any) => {
+        this.nbaPlayers = answer.values;
+        this.nbaPlayersFilter = answer.values;
       });
 
   }
 
   filterPlayer():void{
-    this.nbaPlayersFilter = this.nbaPlayers.filter(player => player.h_meters === this.busqueda );
+    this.nbaPlayersFilter = this.nbaPlayers.filter(player => player.h_meters === this.search );
     
   }
-
 
 
   ngOnInit(): void {}
