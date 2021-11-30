@@ -1,0 +1,7 @@
+<input type="text" [(ngModel)]="busqueda">
+<button (click)="filterPlayer()">SEARCH</button>
+<div>
+    <p *ngFor="let player of nbaPlayersFilter">{{player.first_name}}</p>
+</div>
+
+<p *ngIf="nbaPlayersFilter.length === 0 "> no se encontro un jugador</p>

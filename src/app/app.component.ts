@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JsonService } from 'src/services/json.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,10 +9,11 @@ import { JsonService } from 'src/services/json.service';
 export class AppComponent {
   title = 'NBAPlayers';
 
-  constructor(private json: JsonService){
-    this.json.getJson('https://mach-eight.uc.r.appspot.com/').subscribe((res: any)=> {
-      console.log(res)
-    })
-  }
+ 
+
 
 }
+
+
+
+

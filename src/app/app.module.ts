@@ -4,17 +4,24 @@ import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JsonService } from 'src/services/json.service';
+import { BuscarComponent } from './buscar/buscar.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BuscarComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [JsonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
