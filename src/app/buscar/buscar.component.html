@@ -1,7 +1,32 @@
-<input type="text" [(ngModel)]="busqueda">
-<button (click)="filterPlayer()">SEARCH</button>
-<div>
-    <p *ngFor="let player of nbaPlayersFilter">{{player.first_name}}</p>
-</div>
+<div class="titulo">Welcome to NBA players Height</div>
 
-<p *ngIf="nbaPlayersFilter.length === 0 "> no se encontro un jugador</p>
+<input type="text" [(ngModel)]="busqueda">
+
+<button class="btn btn-primary" (click)="filterPlayer()">SEARCH</button>
+
+<p *ngIf="nbaPlayersFilter.length===0 "> no se encontro un jugador</p>
+
+
+<br>
+<table class="table table-striped table-hover       ">
+    <thead>
+        <tr>
+
+            <th scope="col ">First Name</th>
+            <th scope="col ">Last Name</th>
+            <th scope="col ">Height in Meters</th>
+            <th scope="col">Height in Inches</th>
+        </tr>
+    </thead>
+    <tbody *ngFor=" let player of nbaPlayersFilter ">
+        <tr>
+
+            <td>{{player.first_name}}</td>
+            <td>{{player.last_name}}</td>
+            <td>{{player.h_meters}}</td>
+            <td>{{player.h_in}}</td>
+
+        </tr>
+    </tbody>
+
+</table>

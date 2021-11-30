@@ -1,0 +1,18 @@
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.py-2 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+header {
+    display: block;
+}
+
+.titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(31, 17, 228);
+}
